@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: url("majestic-night-sky-full-stars.jpg") no-repeat bottom/cover;
+  display: flex;
+  align-items: center;
+}
+
+.form-wrapper {
+  margin: 0 auto;
+  width: 35%;
+  min-width: 480px;
+  height: 50%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 10px 80px 18px rgba(14, 22, 20, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  background: transparent;
+}
+
+.username {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+label {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.avatar {
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.avatar-select {
+  padding: 10px 60px;
+  text-align: center;
+  width: 190px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+option {
+  background-color: rgba(141, 161, 233, 0.4);
+
+}
+
+.btn {
+  padding: 12px 60px;
+  color: whitesmoke;
+  background: #6dcedf;
+  cursor: pointer;
+  transition: 1.2s;
+  border-radius: 10px;
+  width: 190px;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: url("majestic-night-sky-full-stars.jpg") no-repeat bottom/cover;
+}
+
+.chat-header {
+  backdrop-filter: blur(1.25rem);
+  background: transparent;
+  border-radius: 10px;
+  overflow: visible;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  color: rgb(109, 206, 223);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0.125rem 0.313rem 0.325rem rgba(0, 0, 0, .3);
+}
+
+h1,
+label {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+form {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px 20px;
+  backdrop-filter: blur(1.25rem);
+  background: transparent;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0.125rem -0.313rem 1.325rem rgba(0, 0, 0, .3);
+}
+
+input {
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  flex-grow: 1;
+  max-width: 900px;
+  height: 40px;
+}
+
+.input.home>input {
+  border-radius: 10px !important;
+  width: 190px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background-color: #6dcedf;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.messages-list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+  background: rgba(0, 0, 0, .4);
+}
+
+.messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+.message-content {
+  display: inline-block;
+}
+
+.currentMember>.message-content {
+  align-items: flex-end;
+}
+
+.messages-message>.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.message-content>.username {
+  display: block;
+  color: rgb(253, 253, 253);
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  width: 120%;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  max-width: fit-content;
+  padding: 10px 15px 10px 15px;
+}
+
+.message-content>.text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 0 12px 12px 12px;
+  background-color: cornflowerblue;
+  color: white;
+  display: inline-block;
+  margin: 4px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.currentMember>.message-content .text {
+  background-color: #6dcedf;
+  border-radius: 12px 0 12px 12px;
+}
+
+.timestamp {
+  color: white;
+  float: right;
+  font-size: .725rem;
+  margin-left: 0.625rem;
+  position: relative;
+  right: -0.125rem;
+  top: 0.5rem;
+}
