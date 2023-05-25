@@ -5,8 +5,12 @@ function Messages(props) {
   const renderMessage = (message, index) => {
     const { member, text, timestamp } = message;
 
-    const messageFromMe = member.id === props.currentMember.id;
+    const messageFromMe = (member || {}).id === (props.currentMember || {}).id;
     const className = messageFromMe ? "messages-message currentMember" : "messages-message";
+
+    if (!member || !props.currentMember) {
+      return null;
+    }
 
     return (
       <li className={className} key={index}>
