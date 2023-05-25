@@ -8,7 +8,7 @@ const App = () => {
   const [username, setUsername] = useState('');
   const [avatar, setAvatar] = useState('👨');
   const [drone, setDrone] = useState(null);
-  const [member, setMember] = useState('');
+  const [member, setMember] = useState(null);
 
   const onChangeUsername = (e) => {
     setUsername(e.target.value);
