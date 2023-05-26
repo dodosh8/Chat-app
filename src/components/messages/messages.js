@@ -1,6 +1,14 @@
 import React from "react";
 
 function Messages(props) {
+  
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(scrollToBottom, [props.messages]);
 
   const renderMessage = (message, index) => {
     const { member, text, timestamp } = message;
@@ -30,6 +38,7 @@ function Messages(props) {
   return (
     <ul className="messages-list">
       {props.messages.map((m, i) => renderMessage(m, i))}
+    <div ref={messagesEndRef} />
     </ul>
   );
 }
